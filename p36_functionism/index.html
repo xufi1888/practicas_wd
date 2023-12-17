@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+    
+</head>
+
+<body>
+
+    <div class="buttons">
+        <button value="copy" class="buttons_button buttons_button--copy">COPY</button>
+        <button value="delete" class="buttons_button buttons_button--delete">DELETE</button>
+        <button value="insert" class="buttons_button buttons_button--insert">INSERT TEXT</button>
+    </div>
+
+    <p class="dom-item">Elemento DOM</p>
+
+    <script>
+        const buttons = document.querySelector('.buttons')
+        const palabrujo = document.querySelector('.palabrujo')
+
+
+        buttons.addEventListener('click', function(e) {
+            const domItem = document.querySelector('.dom-item')
+            console.log(e.target);
+            clickOnElements(domItem, e.target.value);
+        })
+
+        function clickOnElements(domElement, action) {
+            if(action === "delete") {
+                domElement.remove();
+            }
+            else if(action === "copy"){
+                document.body.appendChild(domElement.cloneNode(true));
+            } else {
+                console.log('No existe esa acción')
+            }
+        }
+
+
+        const myObject ={
+            prop1: "super",
+            prop2: "cali",
+            prop3: "fragil",
+            prop4: "istico",
+            prop5: "espi",
+            prop6: "alid",
+            prop7: "oso",
+
+            concatenar: function() {
+                let all = " "
+                Object.values(this).forEach((prop) => {
+                if(typeof prop == "string") all += prop;
+                })
+                return all
+            }
+        }
+
+        console.log(myObject.concatenar())
+
+    </script>
+
+</body>

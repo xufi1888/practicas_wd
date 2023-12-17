@@ -1,0 +1,88 @@
+* {padding:0; margin:0; border: none; box-sizing: border-box}
+
+img {
+    height: 100%;
+}
+
+button {
+    background: red;
+    color: white;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: blue;
+}
+
+.arena {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 10px
+}
+
+.arena__photo {
+    width: 350px;
+    height: 600px;
+    border: 5px solid red;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.arena__photo__container {
+    height: 100%;
+    width: 100%;
+    background-image: url(../goku.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.winner {
+    border: 10px solid rgb(68, 255, 0);
+    animation: winnerAnimation 0.2s ease-in;
+}
+
+.winner::after {
+    content: "WINNER!";
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(68, 255, 0);
+    position: absolute;
+    top: 550px;
+    font-size: 4rem;
+}
+
+.draw {
+    border: 10px solid yellow;
+    animation: winnerAnimation 0.2 ease-in;
+}
+
+.draw::after {
+    content: "DRAW!";
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: yellow;
+    position: absolute;
+    top: 550px;
+    font-size: 4rem;
+}
+
+@keyframes winnerAnimation {
+    0% {transform: rotate(0)}
+    25% {transform: rotate(5deg)}
+    50% {transform: rotate(0)}
+    75% {transform: rotate(-5deg)}
+    100% {transform: rotate(0)}
+}
+
+.fight__button {
+    font-size: 3rem;
+    padding: 5px;
+}
+
+.arena__photo__text {
+    position: relative;
+}

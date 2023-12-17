@@ -1,0 +1,86 @@
+* {padding:0; margin:0; border: none; box-sizing: border-box}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.container {
+    min-height: 100vh;
+    background-color: rgb(10, 10, 45);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title {
+    font-family: 'Russo One', sans-serif;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+.actor_container {
+    background-image: linear-gradient(to bottom, rgb(10, 10, 45), rgb(57, 57, 109));
+    border: 5px solid white;
+    display: flex;
+}
+
+.actor_photo_container {
+    width: 200px;
+    height: 200px;
+}
+
+.actor_info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h3 {
+    font-family: 'Russo One', sans-serif;
+    color: white;
+    font-size: 2rem;
+}
+
+p {
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+}
+
+.actor_info_alt_name {
+    font-weight: 900;
+    padding: 5px;
+}
+
+.actor_info_rating {
+    font-weight: 900;
+    padding: 5px;
+}
+
+.actor_info_id {
+    font-weight: 900;
+    padding: 5px;
+}
+
+.ranking_1st:hover {
+    border: 5px solid aqua;
+}
+
+.ranking_2nd:hover {
+    border: 5px solid rgb(21, 255, 0);
+}
+
+.ranking_3rd:hover {
+    border: 5px solid yellow
+}
+
+.ranking_4th:hover {
+    border: 5px solid orangered;
+}
+
+.ranking_5th:hover {
+    border: 5px solid red;
+}

@@ -1,0 +1,75 @@
+
+* {
+    padding: 0; 
+    margin: 0; 
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../img/background.webp");
+    background-repeat: no-repeat;
+    background-color: #151515;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    padding: 40px;
+}
+
+.fondito {
+    background-image: radial-gradient(#303030, #151515)
+}
+
+h1 {
+    color: aliceblue;
+    text-align: center;;
+}
+
+.btn_flechas {
+    width: 120px;
+    border-style: none;
+    text-align: center;
+}
+
+
+object {
+    width: 120px
+}
+
+svg {
+    width: 120px;
+}
+
+div {
+    text-align: center;
+}
+
+figure {
+    margin-top: 50px;
+    width: 500px;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+    border: 1px solid cadetblue;
+}
+
+picture {
+    width: 300px;
+}
+
+figcaption {
+    color: cadetblue;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+.brillito {
+    width: 50px;
+    margin:auto;
+    border-style: none
+}

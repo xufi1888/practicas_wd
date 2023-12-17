@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>IMGSETS</title>
+</head>
+<body>
+    
+    <div>
+        <img 
+        src="img/imgset/voldemort-small.jpg"
+        srcset="img/imgset/voldemort-small.jpg 400w,
+        img/imgset/voldemort-medium.jpg 700w,
+        img/imgset/voldemort-large.jpg 1000w"
+        alt="Voldemort Feliz"
+        >
+    </div>
+
+    <div>
+
+        <picture>
+            
+            <source srcset="img/imgset/voldemort-large.jpg" media="(min-width:600px)">
+            <source srcset="img/imgset/voldemort-medium.jpg" media="(min-width:400px)">
+            <img src="img/imgset/voldemort-small.jpg" alt="Voldy Feliz" title="Voldy Feliz">
+
+        </picture>
+
+        <picture>
+            
+            <source srcset="img/voldemort-triste.avif" type="image/avif">
+            <source srcset="img_webp/voldemort-triste_1.webp" type="image/webp">
+            <img src="img/imgset/voldemort-small.jpg" alt="Voldy Feliz" title="Voldy Feliz">
+
+        </picture>
+
+    </div>
+
+    <div>
+        <a href="imagemap.html">ÚLTIMA PÁGINA</a>
+    </div>
+
+</body>
+</html>

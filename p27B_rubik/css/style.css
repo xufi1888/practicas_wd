@@ -1,0 +1,61 @@
+* {padding:0; margin:0; border: none; box-sizing: border-box}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    perspective: 1800px;
+    perspective-origin: 50% -50%;
+}
+
+.cube {
+    perspective: 900px;
+    transform-style: preserve-3d;
+    height: 306px;
+    width: 306px;
+    position: relative;
+}
+
+.cube_side1, .cube_side2, .cube_side3 {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    position: absolute;
+}
+
+.cube_side1 {
+    transform: rotateY(45deg) translate(50%, 50%);
+    top: 0px;
+}
+
+.cube_side2 {
+    transform: rotateY(-45deg) translate(-50%, 50%);
+    top: 0px;
+}
+
+.cube_side3 {
+    transform: rotateX(90deg) rotateZ(45deg) translate(-50%, -50%);
+    top: 0px;
+}
+
+.cube_tile {
+    border: 10px solid black;
+    border-radius: 10px;
+    height: 100px;
+}
+
+.cube_tile:hover {
+    border-color: aqua;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}

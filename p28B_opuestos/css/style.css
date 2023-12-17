@@ -1,0 +1,78 @@
+* {padding:0; margin:0; border: none; box-sizing: border-box}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.selfish {
+    width: 100%;
+    display: flex;
+    height: 100vh;
+}
+
+.selfish_yo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    font-size: 10rem;
+}
+.selfish_tu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+    background-color: white;
+    color: black;
+    font-size: 10rem;
+}
+
+.solidarity {
+    display: block;
+    height: 100vh;
+}
+
+.solidarity_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: white;
+    color:darkcyan;
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 825;
+}
+
+.solidarity_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    padding: 50px;
+    background-color: darkcyan;
+    color: white;
+    font-size: 2rem;
+}
+
+@media screen and (min-width: 900px) {
+    .solidarity {
+        display: none;
+    }
+    .selfish {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .solidarity {
+        display: block;
+    }
+    .selfish {
+        display: none;
+    }
+}

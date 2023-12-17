@@ -1,0 +1,149 @@
+* {padding:0; margin:0; border: none; box-sizing: border-box}
+
+/* #5a7c90 */
+
+body {
+    font-family: 'Teko', sans-serif;
+    font-weight: 600;
+}
+
+img {
+    width: 100%;
+}
+
+.general_container {
+    overflow: hidden;
+}
+
+.menu-bar {
+    background-color: #334D5C;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.menu-bar-icon {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.menu-bar-options-list {
+    display: flex;
+    color: white;
+}
+
+.menu-bar-options-list-item {
+    list-style: none;
+    padding: 0px 40px;
+    font-size: 3rem;
+}
+
+.menu-bar-options-list-item:hover {
+    color:greenyellow;
+    cursor: pointer;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.content-post-illustration {
+    background-color: #5a7c90;
+    border: 0.5px solid #334D5C;
+}
+
+.content-post-text {
+    background-color: black;
+    color: white;
+    padding: 40px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.footer {
+    background-color: #334D5C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.footer-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.menu-bar-options-mobile {
+    width: 75px;
+    display: none;
+    background-color: transparent;
+    border: none;
+}
+
+.menu-bar-options-mobile:hover {
+    cursor: pointer;
+}
+
+.menu-bar-options-list-container-mobile {
+    background-color: green;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    padding: 10px;
+    position: absolute;
+    top: 80px;
+    right: -200px;
+    transition: right 0.5s;
+}
+
+.menu-bar-options-list-mobile {
+    list-style: none;
+}
+
+.is-active {
+    right: 50px;
+}
+
+@media screen and (max-width: 960px) {
+    .menu-bar-options-mobile {
+        display: flex;
+    }
+    .menu-bar-options-desktop {
+        display: none;
+    }
+    .content {
+        display:flex;
+        flex-direction: column;
+        padding: 0px 0px 50px;
+    }
+    .menu-bar-options-mobile {
+        width: 50px;
+    }
+    .menu-bar-icon {
+        width: 50px;
+        height: 50px;
+    }
+    .menu-bar {
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .menu-bar-options-mobile {
+        display: none;
+    }
+    .menu-bar-options-desktop {
+        display: flex;
+    }
+    .content {
+        display:grid;
+    }
+}

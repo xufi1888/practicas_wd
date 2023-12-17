@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table, td, tr {
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding-top: 20px; padding-bottom: 20px; 
+    padding-left: 55px; padding-right: 55px;
+    text-align: center;
+}
+td {
+    width: 200px
+}
+thead {
+    background-color: rgb(0, 0, 255);
+    color:white
+}
+.second_row {
+    background-color:rgb(134, 162, 224);
+}
+.third_row {
+    background-color: rgb(171, 189, 228);
+}
+.fourth_row {
+    background-color: rgb(221, 229, 245);
+}
+.fifth_row {
+    background-color: rgb(239, 241, 247);
+}

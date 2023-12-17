@@ -1,0 +1,53 @@
+* {padding: 0; margin: 0; border: none; box-sizing: border-box}
+
+body {
+    background-color: white;
+    font-family: 'Dosis', sans-serif;
+    padding: 10px;
+}
+
+img {
+    width: 100%;
+}
+
+.grid {
+    max-width:800px;
+    margin: auto;
+}
+
+.grid_header_title {
+    font-size: 5rem;
+    padding-bottom: 100px;
+}
+
+.grid_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.container_item_image {
+    aspect-ratio: 3/4;
+}
+
+.grid_image {
+    object-fit:cover;
+    object-position: center;
+    height: 100%;
+}
+
+.grid_container_item {
+    border: 2px solid black;
+}
+
+.container_item_text {
+    padding: 20px;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 0.9rem;
+}

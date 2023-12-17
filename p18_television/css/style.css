@@ -1,0 +1,107 @@
+* {padding: 0; margin: 0; border: none; box-sizing: border-box}
+
+body {
+    background-color: black;
+}
+
+button {
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.container_all {
+ margin: auto;
+}
+
+.container_tv {
+    border: 2px solid yellow;
+    border-radius: 50px;
+    display: inline-flex;
+    flex-direction:column;
+    padding: 50px;
+    max-width: 700px;
+    position:relative;
+}
+
+.container_tv_screen {
+    border: 2px solid yellow;
+    border-radius: 10px;
+    height: 400px;
+    width: 600px;
+    overflow: hidden;
+}
+
+.screen_images {
+    width: 100%;
+    height:100%;
+    object-position: center;
+}
+
+.display {
+    width: 100%;
+    height:100%;
+    object-position: center;
+    object-fit:cover;
+}
+
+.tv_buttons {
+    margin-top: 10px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.buttons_chanel {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    max-width: 200px;
+    max-height: 50px;
+    gap: 5px;
+}
+
+.chanel_button {
+    padding: 3px 15px;
+    background-color: rgb(250, 250, 115);
+    border-radius: 3px;
+}
+
+
+.on_off {
+    width: 70px;
+    height: 45px;
+    background-color: darksalmon;
+    border-radius: 5px;
+}
+
+.sint {
+    width: 70px;
+    height: 10px;
+    background-color:yellow;
+    border-radius: 5px;
+}
+
+.button_text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color:white;
+}
+
+.tv_leg {
+    position: absolute;
+    display:inline-flex;
+    width:100px;
+    height: 30px;
+    background-color: gold;
+    bottom: -5%
+}
+
+.right {
+    left:78%;
+}
+
+.off {
+    display: none;
+}
+
+.pressed {
+    box-shadow: inset 0px 0px 10px salmon;
+}

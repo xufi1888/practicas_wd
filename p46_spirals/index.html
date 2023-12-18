@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="my_canvas" width="750px" height="500px" style="border: 2px solid black">
+
+    </canvas>
+
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+    <script>
+        const myCanvas = document.getElementById("my_canvas")
+        // Contexto: entorno multimedia.
+        const ctx = myCanvas.getContext("2d")
+
+        let centerX = 375;
+        let centerY = 250;
+
+        ctx.moveTo(centerX, centerY)
+
+        ctx.fillstye= "black";
+        ctx.fillRect(0,0,myCanvas.width,myCanvas.height)
+
+        let gap = 3;
+        let increment = 0.1;
+        let theta = increment;
+
+        // Formulas paramétricas.
+
+
+
+
+        function animate() {
+            let newX = centerX + theta*Math.cos(theta)*gap;
+            let newY = centerY + theta*Math.sin(theta)*gap;
+
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = "#8500FF";
+            ctx.lineTo(newX, newY);
+            ctx.stroke()
+
+            theta = theta + increment;
+
+            window.requestAnimationFrame(function() {
+                if(theta === 2) return;
+
+                animate();
+            })
+        }
+
+        animate()
+
+        ctx.clear(stroke)
+
+        
+        // while(theta < 60*Math.PI) {
+            // let newX = centerX + theta*Math.cos(theta)*gap;
+            // let newY = centerY + theta*Math.sin(theta)*gap;
+// 
+            // ctx.lineWidth = 3;
+            // ctx.strokeStyle = "#8500FF";
+            // ctx.lineTo(newX, newY);
+// 
+            // theta = theta + increment;
+        // }
+// 
+        // 
+        // ctx.stroke()
+
+
+    </script>
+
+</body>
+</html>

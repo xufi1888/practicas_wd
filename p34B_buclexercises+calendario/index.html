@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buclexercises</title>
+</head>
+
+<body>
+
+    <script>
+    // --------------------------EJERCICIO PÁRRAFOS:
+
+        for(let contador= 0; contador<10; contador++) {
+            let color = "#" + contador + "00";
+            console.log(color);
+            if(contador==3) {color="#00F"}
+
+            document.body.innerHTML += "<p class='parrafo' style='boder: 1px solid black; background-color: "+ color +"; color: white; padding: 10px; text-align: center;'>Párrafo creado por un bucle for.</p>";
+        };
+
+    // --------------------------EJERCICIO BOTONES:
+
+        for(let i=100; i>0; i--) {
+            const buttonElement = document.createElement('button');
+            buttonElement.innerHTML = i;
+            buttonElement.style = "background-color: brown; color: white; border: none; width: 50px; padding: 10px; margin: 10px;";
+            buttonElement.addEventListener('click', function() {
+                console.log('He hecho click en el número ' + i);
+            })
+            document.body.appendChild(buttonElement);
+        };
+
+    // --------------------------EJERCICIO MESES:
+
+        const year = [
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"
+        ];
+
+        console.log('--------------FOR--------------');
+        for(let meses=0; meses<year.length; meses++) { console.log(year[meses]) };
+
+        year.forEach((element, index) => {
+            if(element == "Febrero") {return;}
+            document.body.innerHTML += "<p style='text-align: center; font-size: 3rem; text-transform: uppercase; font-family: Arial;'>"+ year[index] +"</p>"
+        });
+
+        console.log('------------FOR OF------------')
+        for(let item of year) {
+            console.log(item);
+        };
+
+    // --------------------------EJERCICIO CALENDARIO:
+
+        console.log('---------CALENDARIO----------')
+
+        const semana = {
+            lunes: "L",
+            martes: "M",
+            miercoles: "X",
+            jueves: "J",
+            viernes: "V",
+            sabado: "S",
+            domingo: "D"
+        }
+
+        document.body.innerHTML += '<div class="container"></div>'
+        const container = document.querySelector('.container')
+        container.style.display = "grid"  
+        container.style.gridTemplateColumns = "repeat(4, 1fr)"
+        container.style.border = "5px solid black"
+        container.style.fontFamily = "Arial"
+
+        
+        year.forEach((mes)=>{
+            container.innerHTML += 
+            `<div class="titulo" style="border: 1px solid black; padding: 30px; background-color: #929292;"> 
+                <h2 style="margin: 0px; font-size: 2rem;">${mes}</h2>
+                <div class="weeks-${mes}"></div>
+                <div class="days-${mes}"></div>
+            </div>`;
+
+            const weeks = document.querySelector('.weeks-' + mes)
+            const days = document.querySelector('.days-' + mes)
+
+            weeks.style.display = "grid";
+            weeks.style.gridTemplateColumns = "repeat(7, 1fr)";
+            weeks.style.fontWeight = "bolder";
+            weeks.style.fontSize = "1.25rem"
+            weeks.style.margin = "0px"
+
+            days.style.display = "grid";
+            days.style.gridTemplateColumns = "repeat(7, 1fr)";
+            days.style.margin = "0px"
+
+
+            Object.values(semana).forEach((dia, index)=> {
+                weeks.innerHTML += `<p style="text-align: center;"> ${Object.values(semana)[index]} </p>`
+            })
+
+            let dias = 32
+
+            for(let dia=1; dia<dias; dia++) {
+                if(mes == 'Febrero') { dias = 29 }
+                if(mes == 'Abril' || mes == 'Junio' || mes == 'Septiembre' || mes == 'Noviembre') { dias = 31 }
+
+                days.innerHTML += `<p class='dia_container' style="margin: 0px; padding: 10px; text-align: center; color: #454545"> ${dia} </p>`;
+            }
+
+        })
+
+        
+//          CONVERSIÓN DE OBJETO EN ARRAY:
+            // Object.keys(obj); // me da keys
+            // Object.values(obj); // me da values
+            // Object.entries(obj); // me da keys y values
+
+    </script>
+    scri
+
+</body>
